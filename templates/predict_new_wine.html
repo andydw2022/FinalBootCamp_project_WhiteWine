@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>White Wine Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.min.js"></script>
+</head>
+<body>
+  <table id='tbl' border=1></table>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">White wine Physical and Chemical Properties
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>White Wine Quality Predictor</h1>
+        <p></p>     
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <!--Image courtesy of Stick-png: https://www.stickpng.com/img/comics-and-fantasy/et-the-extra-terrestrial/et-the-extra-terrestrial-pointing-finger -->
+        <img  src="static/images/whitewineshades.jpg" width="200"  height=auto>
+        <p>Enter the physical and chemical characteristics of your new white wine and it will
+          predict its quality on a scale of 3-9, 3 being low and 9 being high quality  </p>
+        <button class="btn" onClick="window.location.reload();">Clear Page</button>
+        <button class="btn" id="button2" type="button" >Show All White Wine Qualties</button>  
+        <button id="button" type="button" class="btn">Run Prediction</button>           
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">           
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="fixed_acidity">Enter Fixed Acidity</label>
+                          <input type="text" id="fixed_acidity" size="10" name="fixed_acidity">                  
+                        <label for="volatile_acidity">Enter Volatile Acidity</label>               
+                          <input type="text" id="volatile_acidity" size="10" name="volatile_acidity"> 
+                        <label for="citric_acid">Enter Citric Acid</label>
+                          <input type="text" id="citric_acid" size="10" name="citric_acid"> 
+                        <label for="residual_sugar">Enter Residual Sugar</label>
+                          <input type="text" id="residual_sugar" size="10" name="residual_sugar"> 
+                        <label for="chlorides">Enter Chlorides</label>
+                          <input type="text" id="chlorides" size="10" name="chlorides">
+                          <label for="total_sulfur_dioxide">Enter Total Sulfur Dioxide</label>
+                          <input type="text" id="total_sulfur_dioxide" size="10" name="total_sulfur_dioxide"> 
+			                  <label for="free_sulfur_dioxide">Enter Free Sulfur Dioxide</label>
+                          <input type="text" id="free_sulfur_dioxide" size="10" name="free_sulfur_dioxide"> 
+			                  <label for="density">Enter Density</label>
+                          <input type="text" id="density" size="10" name="density"> 
+			                  <label for="pH">Enter pH</label>
+                          <input type="text" id="pH" size="10" name="pH"> 
+			                  <label for="sulphates">Enter Sulphates</label>
+                          <input type="text" id="sulphates" size="10" name="sulphates"> 
+			                  <label for="alcohol">Enter Alcohol</label>
+                          <input type="text" id="alcohol" size="10" name="alcohol">  
+                      </li>
+                    </ul>
+                  </div>                 
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ranges-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Characteristic</th>  
+                  <th class="table-head">Min Value</th>                 
+                  <th class="table-head">Max Value</th>  
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
