@@ -14,16 +14,36 @@
     <div class="jumbotron text-center">
       <h1>Wine Prediction Model</h1>
       <p>
-      <a class="btn btn-primary btn-lg" href="/predict_new_wine"  role="button">New white wine quality predictor</a>
-      <br> <br>
-      <a class="btn btn-primary btn-lg" href="/tableau_viz1"      role="button">Tableau Visualisations : Most common white wine quality </a>
-      <br> <br>
-      <a class="btn btn-primary btn-lg" href="/tableau_viz2"      role="button">Tableau Visualisations : Most common white wine quality : Top correlated characteristics</a>
-      <br> <br>
-      <a class="btn btn-primary btn-lg" href="/tableau_viz3"      role="button">Tableau Visualisations : Most common white wine quality : Bottom correlated characteristics</a>
+      Put graphs of quality vs wine physical chemical properties here
+      <a class="btn btn-primary btn-lg" href="/predict_new_wine" role="button">New white wine quality predictor</a>
+      <a class="btn btn-primary btn-lg" href="/map_cbs"     role="button">Misc</a>
     </p>
     </div>
-        </body>
+
+    <div class="row" id="net_data">
+      <div class="col-md-12">
+          <h3></h3>
+      </div>
+    </div>
+    <div class="col">
+      <div  class="col-lg-12"> </div>
+        <div class="col">
+            <table>
+            <h3>Table of wine Physical Chemical Properties</h3>
+            </table>
+          </div>
+      </div>     
+    </div> 
+  </div>
+  <br>
+  <br>
+  <div class="col">
+    <div class="col-lg-4"></div>
+  </div>
+
+  
+
+</body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

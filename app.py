@@ -13,24 +13,24 @@ app = Flask(__name__)
 def index():
     #scrape_data.scrape_info()
     #internet_data = mongo.db.countryspeed.find_one()
-    return render_template("predict_new_wine.html")
+    return render_template("index.html")
 
 @app.route("/predict_new_wine")
 def predict_new_wine():
     new_wine_predictor
     return render_template("predict_new_wine.html")
 
-# @app.route("/map_cbs")
-# def map_cbs():
-#     return render_template("world_map_cbs.html")
+@app.route("/tableau_viz1")
+def tableau_viz():
+     return render_template("tableau_viz1.html")
 
-# @app.route("/barchart")
-# def barchart():
-#     return render_template("barchart.html")
+@app.route("/tableau_viz2")
+def tableau_viz2():
+     return render_template("tableau_viz2.html")
 
-# @app.route("/scatterplot")
-# def scatterplot():
-#     return render_template("scatter_plot.html")
+@app.route("/tableau_viz3")
+def tableau_viz3():
+     return render_template("tableau_viz3.html")
 
 
 if __name__ == "__main__":
